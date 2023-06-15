@@ -1,12 +1,8 @@
+/* =============== Variables =============== */
 const form = document.getElementById('form');
-const email = document.getElementById('email');
 
-form.addEventListener('submit', e => {
-	e.preventDefault();
 
-	validateInput();
-});
-
+/* =============== Functions =============== */
 const setError = (element, message) => {
 	const inputControl = element.parentElement;
 	const errorMessage = inputControl.querySelector('.error-text');
@@ -25,12 +21,14 @@ const setSuccess = element => {
 	inputControl.classList.remove('error');
 };
 
-const isValidEmail = email => {
+const isValidEmail = element => {
 	const reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return reg.test(String(email).toLowerCase());
+
+	return reg.test(String(element).toLowerCase());
 };
 
 const validateInput = () => {
+	const email = document.getElementById('email');
 	const emailValue = email.value.trim();
 
 	if (emailValue === '') {
@@ -43,3 +41,10 @@ const validateInput = () => {
 		setSuccess(email);
 	}
 };
+
+/* =============== Events =============== */
+form.addEventListener('submit', e => {
+	e.preventDefault();
+
+	validateInput();
+});

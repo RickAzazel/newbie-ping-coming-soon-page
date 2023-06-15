@@ -1,7 +1,12 @@
-*, ::before, ::after {
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*,
+::before,
+::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: 'Libre Franklin', sans-serif;
 }
 
 :root {
@@ -33,7 +38,6 @@
 }
 
 html {
-	font-family: 'Libre Franklin', sans-serif;
 	font-size: 62.5%;
 }
 
@@ -42,8 +46,8 @@ body {
 }
 
 .wrapper {
-	height: 100vh;
 	width: 100%;
+	height: 100vh;
 }
 
 .container {
@@ -112,7 +116,8 @@ body {
 	flex-wrap: wrap;
 }
 
-.input, .btn {
+.input,
+.btn {
 	height: 50px;
 	border-radius: 30px;
 }
@@ -165,11 +170,11 @@ body {
 	font-style: italic;
 }
 
-.error > .input {
+.error>.input {
 	border-color: var(--input-border-color--error);
 }
 
-.success > .input {
+.success>.input {
 	border-color: var(--input-border-color--success);
 }
 
@@ -217,7 +222,7 @@ body {
 	transition: all .5s;
 }
 
-.footer__icons-item:hover > .footer__icons-link svg {
+.footer__icons-item:hover>.footer__icons-link svg {
 	fill: var(--icon-color--hover);
 }
 
@@ -236,7 +241,9 @@ body {
 	html {
 		font-size: 56%;
 	}
-	.input, .btn {
+
+	.input,
+	.btn {
 		width: 100%;
 		margin: 0 30px;
 	}
@@ -273,7 +280,8 @@ body {
 		font-size: 3.3rem;
 	}
 
-	.input, .btn {
+	.input,
+	.btn {
 		height: 40px;
 	}
 
@@ -292,4 +300,3 @@ body {
 		left: 4px;
 	}
 }
-
